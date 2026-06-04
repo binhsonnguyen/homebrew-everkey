@@ -2,8 +2,7 @@ cask "everkey" do
   version "0.2.0"
   sha256 "4ee586b611415622b834a339a1c8da2d9bf0912b0f4dd7fb57b61b38c4777e31"
 
-  url "https://github.com/binhsonnguyen/Everkey/releases/download/v#{version}/Everkey-#{version}.dmg",
-      verified: "github.com/binhsonnguyen/Everkey/"
+  url "https://github.com/binhsonnguyen/Everkey/releases/download/v#{version}/Everkey-#{version}.dmg"
   name "Everkey"
   desc "Bộ gõ tiếng Việt cho macOS (Simple Telex)"
   homepage "https://github.com/binhsonnguyen/Everkey"
@@ -12,6 +11,8 @@ cask "everkey" do
     url :url
     strategy :github_latest
   end
+
+  depends_on macos: ">= :monterey"
 
   app "Everkey.app"
 
